@@ -7,17 +7,22 @@ import { getRepoContent } from '@/lib/github';
 import { DownloadButton } from '@/components/download-button';
 import { ArrowLeft, Github } from 'lucide-react';
 
+type PageProps = {
+  params: Promise<{
+    slug: string[]
+  }>
+}
+
 export default async function RepoPage({
   params,
-}: {
-  params: { slug: string[] };
-}) {
+}: PageProps) {
   const session = await auth();
   if (!session?.accessToken) {
     redirect('/');
   }
 
-  const [owner, repo] = params.slug;
+  const resolvedParams = await params;
+  const [owner, repo] = resolvedParams.slug;
   if (!owner || !repo) {
     redirect('/');
   }
