@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# repo2ai.com
 
-## Getting Started
+Repo2AI es una plataforma que permite extraer y visualizar el contenido completo de repositorios de GitHub de manera estructurada y segura. Diseñada para facilitar el acceso y análisis de repositorios, con especial enfoque en la preparación de datos para su uso con modelos de lenguaje (LLMs).
 
-First, run the development server:
+## 🚀 Características Principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Acceso Simple y Seguro
+- Autenticación mediante GitHub OAuth
+- Soporte para repositorios públicos y privados
+- Control total sobre permisos y accesos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Extracción Completa del Repositorio
+- Dump completo respetando la estructura de carpetas y archivos
+- Visualización clara del contenido del repositorio
+- Soporte para todo tipo de archivos (código, documentación, configuraciones)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Visualización y Descarga
+- Interfaz organizada que refleja la jerarquía del repositorio
+- Opción de descarga completa en formato comprimido
+- Navegación intuitiva por el contenido
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologías Utilizadas
 
-## Learn More
+- **Frontend**: Next.js 14, React, TypeScript
+- **Autenticación**: NextAuth.js con GitHub Provider
+- **Estilos**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Notificaciones**: Sonner
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Configuración del Proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerrequisitos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js 18.x o superior
+- Una cuenta de GitHub
+- Credenciales de OAuth de GitHub
 
-## Deploy on Vercel
+### Variables de Entorno
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Crea un archivo `.env.local` con las siguientes variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+GITHUB_CLIENT
